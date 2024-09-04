@@ -4,4 +4,6 @@ mysql> CREATE TABLE departments(
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
   );
-  
+
+  mysql> ALTER TABLE people ADD department_id	INT UNSIGNED
+  AFTER email;
