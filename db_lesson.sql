@@ -39,3 +39,10 @@ VALUES
 (14, '１０月４日、天気は晴れ、目標達成'),
 (15, '１０月５日、天気は雨、目標達成'),
 (16, '１０月５日、天気は雨、目標未達成');
+
+mysql> UPDATE people SET department_id = 1 WHERE person_id= 1;
+mysql> UPDATE people SET department_id = 2 WHERE person_id= 2;
+mysql> UPDATE people SET department_id = 3 WHERE person_id= 3;
+mysql> UPDATE people SET department_id = 4 WHERE person_id= 4;
+mysql> UPDATE people SET department_id = 5 WHERE person_id= 6;
+
