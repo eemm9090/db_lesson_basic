@@ -7,7 +7,7 @@ CREATE TABLE departments(
   );
 
 -- Q2
-ALTER TABLE people ADD department_id	INT UNSIGNED
+ALTER TABLE people ADD department_id INT UNSIGNED
   AFTER email;
 
 -- Q3-1
@@ -16,6 +16,10 @@ UPDATE departments SET name = '開発' WHERE department_id = 2;
 UPDATE departments SET name = '経理' WHERE department_id = 3;
 UPDATE departments SET name = '人事' WHERE department_id = 4;
 UPDATE departments SET name = '情報システム' WHERE department_id = 5;
+
+-- Q3-1(追記)
+INSERT INTO department_id name
+VALUES ('営業', '開発', '経理', '人事', '情報システム')
 
 -- Q3-2
 INSERT INTO people (name, email, department_id, age, gender)
@@ -78,7 +82,7 @@ SELECT * FROM people
   ORDER BY age;
 
 -- Q9
-SELECT AVG(age) AS average_age FROM people WHERE gender = 2 GROUP BY gender;
+SELECT AVG(age) AS average_age FROM people WHERE gender = 2 AND department_id = 2 GROUP BY gender;
 
 -- Q10
 SELECT people.name, departments.name, reports.content
