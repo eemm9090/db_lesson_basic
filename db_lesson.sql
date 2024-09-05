@@ -74,3 +74,8 @@ ORDER BY age;
 -- Q9
 mysql> SELECT AVG(age) AS average_age FROM people WHERE gender = 2 GROUP BY gender;
 
+-- Q10
+mysql> SELECT people.name, departments.name, reports.content
+FROM people
+INNER JOIN reports ON people.person_id = reports.person_id
+INNER JOIN departments ON people.department_id = departments.department_id;
