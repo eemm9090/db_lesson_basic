@@ -46,3 +46,4 @@ mysql> UPDATE people SET department_id = 3 WHERE person_id= 3;
 mysql> UPDATE people SET department_id = 4 WHERE person_id= 4;
 mysql> UPDATE people SET department_id = 5 WHERE person_id= 6;
 
+mysql> SELECT name, age FROM people WHERE gender = 1 ORDER BY age DESC;
