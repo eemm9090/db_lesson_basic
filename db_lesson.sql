@@ -70,3 +70,7 @@ OR age BETWEEN 40 AND 49 AND gender = 1;
 mysql> SELECT * FROM people
 WHERE department_id = 1
 ORDER BY age;
+
+-- Q9
+mysql> SELECT AVG(age) AS average_age FROM people WHERE gender = 2 GROUP BY gender;
+
