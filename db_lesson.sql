@@ -47,3 +47,17 @@ mysql> UPDATE people SET department_id = 4 WHERE person_id= 4;
 mysql> UPDATE people SET department_id = 5 WHERE person_id= 6;
 
 mysql> SELECT name, age FROM people WHERE gender = 1 ORDER BY age DESC;
+
+
+-- Q6
+-- peopleテーブルから、department_idが1になっているレコードのうち、カラムが`name`, `email`, `age`のデータを、追加した日時(created_at)が早い順に取得する。
+
+-- SELECT
+--   `name`, `email`, `age`　⇒カラムが`name`, `email`, `age`のデータ
+-- FROM
+--   `people`　⇒peopleテーブルから
+-- WHERE
+--   `department_id` = 1　⇒department_idが1になっているレコード
+-- ORDER BY
+-- `created_at`;　⇒追加した日時(created_at)が早い順
+
