@@ -65,3 +65,8 @@ mysql> SELECT name, age FROM people WHERE gender = 1 ORDER BY age DESC;
 mysql> SELECT name FROM people
 WHERE age BETWEEN 20 AND 29 AND gender = 2
 OR age BETWEEN 40 AND 49 AND gender = 1;
+
+-- Q8
+mysql> SELECT * FROM people
+WHERE department_id = 1
+ORDER BY age;
