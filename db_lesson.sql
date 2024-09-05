@@ -7,3 +7,35 @@ mysql> CREATE TABLE departments(
 
   mysql> ALTER TABLE people ADD department_id	INT UNSIGNED
   AFTER email;
+
+  mysql>  UPDATE departments SET name = '営業' WHERE department_id = 1;
+  mysql>  UPDATE departments SET name = '開発' WHERE department_id = 2;
+  mysql>  UPDATE departments SET name = '経理' WHERE department_id = 3;
+  mysql>  UPDATE departments SET name = '人事' WHERE department_id = 4;
+  mysql>  UPDATE departments SET name = '情報システム' WHERE department_id = 5;
+
+  mysql> INSERT INTO people (name, email, department_id, age, gender)
+VALUES
+('佐藤たろう', 'taro@gizumo.jp', 1, 25, 1),
+('鈴木はるか', 'haruka@gizumo.jp', 1, 25, 2),
+('高橋みさき', 'misaki@gizumo.jp', 1, 25, 2),
+('田中けんた', 'kenta@gizumo.jp', 2, 25, 1),
+('中村あやか', 'ayaka@gizumo.jp', 2, 25, 2),
+('小林ゆうと', 'yuto@gizumo.jp', 2, 25, 1),
+('加藤さくら', 'sakura@gizumo.jp', 2, 25, 2),
+('伊藤まなみ', 'manami@gizumo.jp', 3, 25, 2),
+('渡辺りん', 'rin@gizumo.jp', 4, 25, 2),
+('山本だいき', 'daiki@gizumo.jp', 5, 25, 1);
+
+  mysql> INSERT INTO reports (person_id, content)
+VALUES
+(7, '１０月１日、天気は曇り、目標達成'),
+(8, '１０月１日、天気は曇り、目標未達成'),
+(9, '１０月２日、天気は晴れ、目標達成'),
+(10, '１０月２日、天気は晴れ、目標未達成'),
+(11, '１０月３日、天気は曇り、目標達成'),
+(12, '１０月３日、天気は曇り、目標達成'),
+(13, '１０月４日、天気は晴れ、目標未達成'),
+(14, '１０月４日、天気は晴れ、目標達成'),
+(15, '１０月５日、天気は雨、目標達成'),
+(16, '１０月５日、天気は雨、目標未達成');
