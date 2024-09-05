@@ -79,3 +79,10 @@ mysql> SELECT people.name, departments.name, reports.content
 FROM people
 INNER JOIN reports ON people.person_id = reports.person_id
 INNER JOIN departments ON people.department_id = departments.department_id;
+
+-- Q11
+mysql> SELECT p.name
+FROM people p
+LEFT OUTER JOIN reports r
+USING (person_id)
+WHERE r.content IS NULL;
