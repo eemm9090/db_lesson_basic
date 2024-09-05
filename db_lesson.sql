@@ -61,3 +61,7 @@ mysql> SELECT name, age FROM people WHERE gender = 1 ORDER BY age DESC;
 -- ORDER BY
 -- `created_at`;　⇒追加した日時(created_at)が早い順
 
+-- Q7
+mysql> SELECT name FROM people
+WHERE age BETWEEN 20 AND 29 AND gender = 2
+OR age BETWEEN 40 AND 49 AND gender = 1;
